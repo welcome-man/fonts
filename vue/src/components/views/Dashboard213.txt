@@ -1,0 +1,24 @@
+    initPage () {
+      this.equipmentactiveChart = echarts.init(document.getElementById('main'))
+      this.equipmentactiveChart.setOption({
+        legend: {
+          data: ['设备激活量', '用户注册量'],
+          right: 20,
+          orient: 'vertical'
+        },
+        xAxis: {
+          name: '日期',
+          type: 'category',
+          data: [ '衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子' ]
+        },
+        yAxis: {
+          name: '数量'
+        },
+        series: [
+          {
+            name: '销量',
+            type: 'bar',
+            data: [ 12, 7.8, 14.2, 6.2 ]
+          }
+        ]
+      })
